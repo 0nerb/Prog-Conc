@@ -33,7 +33,7 @@ void * tarefa(void * arg){
     }
     int inicio = args ->id * args -> tamanhoBloco; //inicio do bloco
     int fim = inicio + args -> tamanhoBloco; //fim do bloco
-    
+    somaElementos ->somaVetor =0;
     for(int i = inicio; i<fim; i++ ){
         
         somaElementos->somaVetor = somaElementos->somaVetor + vetor[i];
