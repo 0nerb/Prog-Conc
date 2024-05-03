@@ -1,8 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<pthread.h>
-/*Rodando varias vezes as vezes consigo o resultado desejado e as vezes um número muito aleatório
-provavelmente proveniente de lixo da memória, não consegui resolver.*/
+
 #define TESTE
 
 //vetor global
