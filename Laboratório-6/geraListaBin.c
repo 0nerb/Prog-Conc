@@ -22,6 +22,9 @@ int main(int argc, char *argv[]) {
 
   // Entrada do limite superior
  long long int limite = atoll(argv[1]);
+ long long int total = limite;
+
+ long long int total_primos = 0;
 
   // Abertura do arquivo binário para escrita
   arquivo = fopen("numeros.bin", "wb");
@@ -31,7 +34,9 @@ int main(int argc, char *argv[]) {
     while (limite > 0) {
         fwrite(&i, sizeof(long long int), 1, arquivo);
         if (isPrime(i)) {
-            printf("Primo: %lld\n", i);     
+            printf("Primo: %lld\n", i); 
+            total_primos++;
+                
         }
         limite--;
         i++;
@@ -39,6 +44,7 @@ int main(int argc, char *argv[]) {
 
   // Fechamento do arquivo binário
   fclose(arquivo);
+  printf("Existe %lld primos em %lld números\n", total_primos, total);
 
 return 0;
 }
